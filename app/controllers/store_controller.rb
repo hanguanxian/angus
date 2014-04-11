@@ -3,7 +3,7 @@ class StoreController < ApplicationController
   def index
   	# @productes = Product.paginate (:page => params[:page],
 			# 	:per_page => 6,
-			# 	:conditions => ["name like ?", "%#{params[:search]}%"] )
+			# 	:conditions => ["title like ?", "%#{params[:search]}%"] )
   	#             if params[:search] 
     @productes =  Product.paginate(:page => params[:page], :per_page => 6)
     @cart = current_cart

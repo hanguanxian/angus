@@ -10,24 +10,54 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="row form-group">
+    <div class="col-md-6">    
+      <div class="input-group">
+        <span class="input-group-addon">商品名</span>
+        <%= f.text_field :title, class:"form-control", 
+            placeholder:"请输入商品名"%>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description , :rows => 6%>
+  <div class="row form-group">
+    <div class="col-md-5"><lable>商品种类</lable>
+      <select class="form-control" name="pro_species">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
+  <div class="row form-group">
+    <div class="col-md-5"><lable>商品详情</lable>
+      <%= f.text_area :description , :rows => 3, class:"form-control"%>
+    </div>
+  </div>  
+  <div class="row form-group">
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-addon">图片地址</span>
+        <%= f.text_field :image_url, class:"form-control", placeholder:"请输入商品图片"%>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_field :price %>
+  <div class="row form-group">
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-addon">商品价格</span>
+        <%= f.text_field :price, class:"form-control",
+             placeholder:"请输入商品价格" %>
+      </div>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="row form-group">
+    <div class="col-md-1">
+      <div class="actions">
+        <button type="submit" class="btn btn-default" name="submit">确认</button>
+      </div>
+    </div>
+    <%= link_to '返回', products_path, class:"btn btn-default" %>
   </div>
 <% end %>

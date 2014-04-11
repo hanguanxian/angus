@@ -1,7 +1,9 @@
 <div id='product_list'>
- <h1>产品列表</h1>
-
-<table>
+ <div class="pull-left navbar-brand">产品列表</div>
+ <%= link_to '添加产品', new_product_path, class:"pull-right btn btn-default" %>
+ <div class="clearfix"></div>
+ 
+<table class="table table-striped">
 
     <% @products.each do |product| %>
       <tr class="<%= cycle('list_line_odd','list_line_even') %>">
@@ -18,17 +20,13 @@
         </td>
         <td><%= product.price %></td>
         <td class="list_actions">
-        <%= link_to 'Show', product %><br/>
-        <%= link_to 'Edit', edit_product_path(product) %><br/>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to '查看', product %><br/>
+        <%= link_to '编辑', edit_product_path(product) %><br/>
+        <%= link_to '删除', product, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
     <% end %>
 
 </table>
-</div>
-<br>
 
-<%= link_to 'New Product', new_product_path %>
-<br>
 <%= will_paginate @productes, previous_label:"上一页", next_label:'下一页' %> 

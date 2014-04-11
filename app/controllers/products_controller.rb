@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
     end
   end
   def index
-    @products =  Product.paginate(:page => params[:page], :per_page => 5)
+    @products =  Product.paginate(:page => params[:page], :per_page => 6)
   end
 
   # GET /products/1
@@ -31,6 +31,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
+    debugger
     @product = Product.new(product_params)
 
     respond_to do |format|

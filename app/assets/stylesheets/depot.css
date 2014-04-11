@@ -1,12 +1,7 @@
 /* Global styles */
 
-#store #notice {
-    color: #000;
-    border: 2px solid red;
-    padding: 1em;
-    margin-bottom: 2em;
-    background-color: #f0f0f0;
-    font: bold smaller sans-serif;
+body {
+    /*background: url(../images/bg.gif);*/
 }
 
 
@@ -14,50 +9,9 @@
 
 /* Styles for products/index */
 
-#product_list table {
-    border-collapse: collapse;
-}
-
-#product_list table tr td {
-    padding: 5px;
-    vertical-align: top;
-}
-
 #product_list .list_image {
-    width:        60px;
-    height:       70px;
-}
-
-#product_list .list_description {
-    width:        60%;
-}
-
-#product_list .list_description dl {
-    margin: 0;
-}
-
-#product_list .list_description dt {
-    color:        #244;
-    font-weight:  bold;
-    font-size:    larger;
-}
-
-#product_list .list_description dd {
-    margin: 0;
-}
-
-#product_list .list_actions {
-    font-size:    x-small;
-    text-align:   right;
-    padding-left: 1em;
-}
-
-#product_list .list_line_even {
-    background:   #e0f8f8;
-}
-
-#product_list .list_line_odd {
-    background:   #f8b0f8;
+    height: 5.4em;
+    width: 6em;
 }
 
 /* An entry in the store catalog */
