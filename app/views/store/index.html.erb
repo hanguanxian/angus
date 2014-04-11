@@ -1,0 +1,41 @@
+<%= stylesheet_link_tag "component" %>
+
+<%= javascript_include_tag "modernizr.custom" %>
+
+<section class="grid3d vertical" id="grid3d">
+
+        <div class="grid-wrap">
+          <div class="grid">
+            <% @productes.each do |product| %>
+            <figure>
+              <%= image_tag(product.image_url) %>
+              <h3><%= product.title %></h3>
+            </figure>
+            <% end %>
+          </div>
+        </div><!-- /grid-wrap -->
+        <div class="content">
+          <% @productes.each do |product| %>
+            <div>
+              <div class="dummy-img"><%= image_tag(product.image_url) %></div>
+              <div class="dummy-text">
+                <%= sanitize(product.description) %>
+                <span class="price"><%= number_to_currency(product.price) %></span>
+                <%= button_to '添加到购物车', line_items_path(:product_id => product), class: "btn btn-primary btn-lg" %>
+              </div>
+            </div>
+           <% end %>
+          <span class="loading"></span>
+          <span class="icon close-content "></span>
+        </div>
+
+</section>
+
+<%= will_paginate @productes, previous_label:"上一页", next_label:'下一页' %> 
+
+<%= javascript_include_tag "classie" %>
+<%= javascript_include_tag "helper" %>
+<%= javascript_include_tag "grid3d" %>
+    <script>
+      new grid3D( document.getElementById( 'grid3d' ) );
+    </script>

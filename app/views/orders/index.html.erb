@@ -1,0 +1,27 @@
+<h1>订单列表</h1>
+
+  <div class="row">
+    <div class="col-md-2">姓名</div>
+    <div class="col-md-2">地址</div>
+    <div class="col-md-2">邮件</div>
+    <div class="col-md-2">付款方式</div>
+    <div class="col-md-1"></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-1"></div>
+  </div>
+  <% @orders.each do |order| %>
+      <div class="row">
+        <div class="col-md-2"><%= order.name %></div>
+        <div class="col-md-2"><%= order.address %></div>
+        <div class="col-md-2"><%= order.email %></div>
+        <div class="col-md-2"><%= order.pay_type %></div>
+        <div class="col-md-1"><%= link_to '查看', order %></div>
+        <div class="col-md-1"><%= link_to '编辑', edit_order_path(order) %></div>
+        <div class="col-md-1"><%= link_to '删除', order, method: :delete, data: { confirm: '确定?' } %></div>
+      </div>
+    <% end %>
+ 
+
+<br>
+
+<%= link_to '新建订单', new_order_path %>

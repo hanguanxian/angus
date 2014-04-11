@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Depot</title>
+    <%= stylesheet_link_tag  "bootstrap" %>
+    <%= stylesheet_link_tag  "depot" %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= javascript_include_tag "application" %>
+   
+    <%= csrf_meta_tags %>
+  </head>
+<body>
+  <div class="container">
+<!--     <div id="banner">
+      <%= @page_title || "SHOPPING" %>
+    </div> -->
+    
+  <nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <%= link_to "首页", store_path, class: "navbar-brand" %>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <% if session[:user_id] %>
+      <ul class="nav navbar-nav">
+        <li><%= link_to "订单", orders_path %></li>
+        <li><%= link_to "商品", products_path %></li>
+        <li><%= link_to "用户", users_path %></li>
+        <li><%= button_to "退出", logout_path, method: :delete, class: "btn btn-default navbar-btn" %></li>
+      </ul>
+      <% end %>
+      <form class="navbar-form navbar-right" role="search" method="get" url="<% store_path %>" >
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="输入商品进行搜索">
+        </div>
+        <button type="submit" class="btn btn-default">搜索</button>
+      </form>
+    </div>
+  </nav>  
+
+     
+    <div class="row">
+      <div class="col-md-3">
+          <div class="well">
+            <div>
+              <% if @cart %>
+                <div id="cart" <% if @cart.line_items.empty? %>  style="display: none" <% end %> >
+                 <%= render @cart %>
+                </div>
+              <% end %>
+            </div> 
+
+            <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Sidebar</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Sidebar</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div><!--/.well -->
+      </div>
+      <div class="col-md-9">
+        <%= yield %>
+      </div>
+    </div>   
+
+  </div>
+</body>
+</html>
