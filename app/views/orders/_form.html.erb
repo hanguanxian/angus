@@ -10,24 +10,43 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :姓名 %><br>
-    <%= f.text_field :name, :size => 40%>
+ <div class="row form-group">
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-addon">姓名</span>
+        <%= f.text_field :name, class:"form-control", placeholder:"请输入姓名"%>
+      </div>
+    </div>
+  </div>  
+  <div class="row form-group">
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-addon">地址</span>
+        <%= f.text_field :address, class:"form-control", placeholder:"请输入地址"%>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :地址 %><br>
-    <%= f.text_area :address, rows:3, cols: 40 %>
+  <div class="row form-group">
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-addon">邮箱</span>
+        <%= f.text_field :email, class:"form-control",
+             placeholder:"请输入邮箱" %>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :邮箱 %><br>
-    <%= f.text_field :email , size:40 %>
+  <div class="row form-group">
+    <div class="col-md-6"><span >付款类型</span>
+      <%= f.select  :pay_type, Order::PAYMENT_TYPES, prompt:'选择付款类型', class:"form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :付款类型 %><br>
-    <%= f.select  :pay_type, Order::PAYMENT_TYPES, prompt:'选择付款类型' %>
-  </div>
-  <div class="actions">
-    <%= f.submit '提交' %>
+  
+  <div class="row form-group">
+    <div class="col-md-1">
+      <div class="actions">
+        <button type="submit" class="btn btn-default" name="submit">确认</button>
+      </div>
+    </div>
+    <%= link_to '返回', products_path, class:"btn btn-default" %>
   </div>
 <% end %>

@@ -1,24 +1,26 @@
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+<div class="row show-grid">
+    <div class="col-md-2">商品名:</div>
+    <div class="col-md-6"><%= @product.title %></div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+<div class="row show-grid">
+    <div class="col-md-2">商品详情:</div>
+    <div class="col-md-6"><%= @product.description %></div>
+</div>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+<div class="row show-grid">
+    <div class="col-md-2">图片地址:</div>
+    <div class="col-md-6"><%= @product.image_url %></div>
+</div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+<div class="row show-grid">
+    <div class="col-md-2">价格:</div>
+    <div class="col-md-6"><%= @product.price %></div>
+</div>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+
+<%= link_to '编辑', edit_product_path(@product), class:"btn btn-default" %> 
+<%= link_to '返回', products_path, class:"btn btn-default" %>

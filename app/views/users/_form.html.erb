@@ -1,5 +1,3 @@
-<div class="depot_form">
-
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -12,30 +10,42 @@
       </ul>
     </div>
   <% end %>
-
-  <fieldset>
-  <legend>Enter User Details</legend>
-
-  <div>
-    <%= f.label :用户名 %>:
-    <%= f.text_field :name, :size => 40 %>
+  
+  <div class="row form-group">
+    <div class="col-md-6">    
+      <div class="input-group">
+        <span class="input-group-addon">用户名</span>
+        <%= f.text_field :name, class:"form-control", 
+            placeholder:"请输入用户名"%>
+      </div>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-6">    
+      <div class="input-group">
+        <span class="input-group-addon">密码</span>
+        <%= f.password_field :password, class:"form-control", 
+            placeholder:"请输入密码"%>
+      </div>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-6">    
+      <div class="input-group">
+        <span class="input-group-addon">确认</span>
+        <%= f.password_field :password_confirmation, class:"form-control", 
+            placeholder:"确认密码"%>
+      </div>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-1">
+      <div class="actions">
+        <button type="submit" class="btn btn-default" name="submit">确认</button>
+      </div>
+    </div>
+    <%= link_to '返回', users_path, class:"btn btn-default" %>
   </div>
 
-  <div>
-    <%= f.label :password, '密码' %>:
-    <%= f.password_field :password, :size => 40 %>
-  </div>
-
-  <div>
-    <%= f.label :password_confirmation, '确认密码' %>:
-    <%= f.password_field :password_confirmation, :size => 40 %>
-  </div>
-
-  <div>
-    <%= f.submit %>
-  </div>
-
-  </fieldset>
 <% end %>
 
-</div>

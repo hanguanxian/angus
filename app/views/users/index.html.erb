@@ -1,4 +1,4 @@
-<h1>用户列表</h1>
+
 <!-- START_HIGHLIGHT -->
   <% if notice %>
     <p id="notice"><%= notice %></p>
@@ -11,7 +11,6 @@
 <% @users.each do |user| %>
   <div class="row">
     <div class="col-md-2"><%= user.name %></div>
-    <div class="col-md-1"><%= link_to '查看', user %></div>
     <div class="col-md-1"><%= link_to '编辑', edit_user_path(user) %></div>
     <div class="col-md-1"><%= link_to '删除', user, method: :delete, data: { confirm: '确定?' } %></div>
   </div>

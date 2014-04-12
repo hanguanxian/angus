@@ -7,17 +7,18 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Product.delete_all
 User.create(:name => 'dave', :password =>'secret',:password_confirmation => 'secret')
-Product.create(:title => 'Web Design for Developers',
+Product.create(:title => 'test 11',
                :description =>
                    %{<p>
         <em>Web Design for Developers</em> will show you how to make your
         web-based application look professionally designed. taking a new 
         design from concept all the way to implementation.
       </p>},
+               :pro_species => 'book',
                :image_url =>   '/images/1.jpg',
                :price => 42.95)
 # . . .
-Product.create(:title => 'Programming Ruby 1.9',
+Product.create(:title => 'Ruby 12',
                :description =>
                    %{<p>
         Ruby is the fastest growing and most exciting dynamic language
@@ -25,10 +26,11 @@ Product.create(:title => 'Programming Ruby 1.9',
         you should add Ruby to your toolbox.
       </p>},
                :image_url => '/images/2.jpg',
+               :pro_species => 'book',
                :price => 49.50)
 # . . .
 
-Product.create(:title => 'Rails Test Prescriptions',
+Product.create(:title => 'Rails 13',
                :description =>
                    %{<p>
         <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
@@ -37,8 +39,9 @@ Product.create(:title => 'Rails Test Prescriptions',
         (how to test effectively).
       </p>},
                :image_url => '/images/3.jpg',
+               :pro_species => 'book',
                :price => 43.75)
-Product.create(:title => 'Prescriptions',
+Product.create(:title => 'Prescriptions 14',
                :description =>
                    %{<p>
         <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
@@ -47,8 +50,9 @@ Product.create(:title => 'Prescriptions',
         (how to test effectively).
       </p>},
                :image_url => '/images/4.jpg',
+               :pro_species => 'book',
                :price => 43.75)
-Product.create(:title => 'Rails Test',
+Product.create(:title => 'Rails 15',
                :description =>
                    %{<p>
         <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
@@ -57,9 +61,10 @@ Product.create(:title => 'Rails Test',
         (how to test effectively).
       </p>},
                :image_url => '/images/5.jpg',
+               :pro_species => 'book',
                :price => 43.75)
 # . . .
-Product.create(:title => 'Prog',
+Product.create(:title => 'Prog 16',
                :description =>
                    %{<p>
         Ruby is the fastest growing and most exciting dynamic language
@@ -67,8 +72,9 @@ Product.create(:title => 'Prog',
         you should add Ruby to your toolbox.
       </p>},
                :image_url => '/images/6.jpg',
+               :pro_species => 'book',
                :price => 49.50)
-Product.create(:title => 'Rails Tesiptions',
+Product.create(:title => 'Rails 17',
                :description =>
                    %{<p>
         <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
@@ -77,8 +83,9 @@ Product.create(:title => 'Rails Tesiptions',
         (how to test effectively).
       </p>},
                :image_url => '/images/7.jpg',
+               :pro_species => 'book',
                :price => 43.75)
-Product.create(:title => 'Rap tions',
+Product.create(:title => 'Rap 18',
                :description =>
                    %{<p>
         <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
@@ -87,8 +94,9 @@ Product.create(:title => 'Rap tions',
         (how to test effectively).
       </p>},
                :image_url => '/images/8.jpg',
+               :pro_species => 'book',
                :price => 43.75)
-Product.create(:title => 'Rails Tests',
+Product.create(:title => 'Rails 19',
                :description =>
                    %{<p>
         <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
@@ -97,4 +105,5 @@ Product.create(:title => 'Rails Tests',
         (how to test effectively).
       </p>},
                :image_url => '/images/9.jpg',
+               :pro_species => 'book',
                :price => 43.75)
