@@ -33,12 +33,12 @@ body {
 .grid figure,
 .grid .placeholder {
 	width: 30%;
-	height: 300px;
+	height: 17.2em;
 }
 
 .grid figure {
 	float: left;
-	margin: 10px;
+	margin: 12px;
 	display: inline-block;
 	cursor: pointer;
 	-webkit-touch-callout: none;
@@ -99,8 +99,8 @@ body {
 
 .grid figure img {
 	display: block;
-	height: 225px;
-    width: 255px;
+	height: 200px;
+    width: 220px;
 }
 
 .content,

@@ -13,7 +13,7 @@
             </figure>
             <% end %>
           </div>
-          <div class="clearfix"></div>
+          
         </div><!-- /grid-wrap -->
         <div class="content">
           <% @productes.each do |product| %>
@@ -35,7 +35,7 @@
         </div>
 
 </section>
-
+<div class="clearfix"></div>
 <%= will_paginate @productes, previous_label:"上一页", next_label:'下一页' %> 
 
 <%= javascript_include_tag "classie" %>

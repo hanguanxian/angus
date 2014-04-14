@@ -1,7 +1,7 @@
 /* Global styles */
 
 body {
-   /* background: url(../images/bg.gif);*/
+    background: #EEFFEE;
 }
 
 .nav li a:hover {
@@ -27,6 +27,7 @@ body {
 
 .depot_form fieldset {
     background: #efe;
+    padding-bottom: 2em;
 }
 
 .depot_form legend {
@@ -36,24 +37,23 @@ body {
     padding: 0.2em 1em;
 }
 
-.depot_form label {
-    width: 5em;
-    float: left;
+.depot_form .form-group {
+    padding-bottom: 3em; 
+}
+ 
+.depot_form .control-label {
     text-align: right;
-    padding-top: 0.2em;
-    margin-right: 0.1em;
-    display: block;
+    padding-top: .4em;
 }
 
-.depot_form select, .depot_form textarea, .depot_form input {
-    margin-left: 0.5em;
-}
 
-.depot_form .submit {
-    margin-left: 4em;
-}
-
-.depot_form div {
-    margin: 0.5em 0;
-}
 /* END:form */
+.nav-color {
+    /*background: #EEFFEE;*/
+    color: #8E8277;
+}
+
+.add-pro {
+    margin-top: .7em;
+}
+
