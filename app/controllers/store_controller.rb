@@ -3,7 +3,7 @@ class StoreController < ApplicationController
   def index
   	if params[:search]
 	  	@productes = Product.paginate :page => params[:page],
-                                      :per_page => 5,
+                                      :per_page => 6,
                                       :conditions => ["pro_species like ?", "%#{params[:search]}%"] 
 	else             
 	    @productes =  Product.paginate(:page => params[:page], :per_page => 6)

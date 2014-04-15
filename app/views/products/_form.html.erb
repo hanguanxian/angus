@@ -20,16 +20,15 @@
     </div>
   </div>
   <div class="row form-group">
-    <div class="col-md-6"><lable>商品种类</lable>
-      <select class="form-control" name="pro_species">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
+    <div class="col-md-6">    
+      <div class="input-group">
+        <span class="input-group-addon">商品种类</span>
+        <%= f.text_field :pro_species, class:"form-control", 
+            placeholder:"请输入商品名类型"%>
+      </div>
     </div>
   </div>
+  
   <div class="row form-group">
     <div class="col-md-6"><lable>商品详情</lable>
       <%= f.text_area :description , :rows => 3, class:"form-control"%>

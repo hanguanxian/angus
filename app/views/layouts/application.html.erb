@@ -17,7 +17,7 @@
       <%= @page_title || "SHOPPING" %>
     </div> -->
     
-  <nav class="navbar navbar-default" role="navigation">
+  <nav class="navbar navbar-default nav-set" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <%= link_to "首页", store_path, class: "navbar-brand" %>
@@ -31,8 +31,8 @@
         <li><%= button_to "退出", logout_path, method: :delete, class: "btn btn-default navbar-btn" %></li>
       </ul>
       <% end %>
-      <form class="navbar-form navbar-right" role="search" method="get" action="
-            <% params[:action] %>" >
+      <form class="navbar-form navbar-right" role="search" method="get" action=
+                 "<%= store_path %>">
         <div class="form-group">
           <input type="text" class="form-control" name="search" placeholder="输入商品进行搜索">
         </div>
@@ -43,8 +43,8 @@
 
      
     <div class="row">
-      <div class="col-md-3">
-          <div class="well nav-color">
+      <div class="col-md-3 ">
+          <div class="well nav-set">
             <div>
               <% if @cart %>
                 <div id="cart" <% if @cart.line_items.empty? %>  style="display: none" <% end %> >
@@ -52,19 +52,34 @@
                 </div>
               <% end %>
             </div> 
-
             <ul class="nav nav-list">
               <li class="nav-header">图书.家电.数码</li>
-              <li><a href="?search=数码产品" method="get">数码产品</a></li>
-              <li><a href="?search=图书" method="get">图书</a></li>
-              <li><a href="?search=家电" method="get">家电</a></li>
+              <li>
+                <%= link_to '数码', {controller:"store",action:"index", search:"数码"} %>
+              </li>
+              <li>
+                <%= link_to '图书', {controller:"store",action:"index", search:"图书"} %>
+              </li>
+              <li>
+                <%= link_to '家电', {controller:"store",action:"index", search:"家电"} %>
+              </li>
               <li class="nav-header">服饰.化妆品.箱包</li>
-              <li><a href="?search=服饰" method="get">服饰</a></li>
-              <li><a href="?search=化妆品" method="get">化妆品</a></li>
-              <li><a href="?search=箱包" method="get">箱包</a></li>
+              <li>
+                <%= link_to '服饰', {controller:"store",action:"index", search:"服饰"} %>
+              </li>
+              <li>
+                <%= link_to '鞋', {controller:"store",action:"index", search:"鞋"} %>
+              </li>
+              <li>
+                <%= link_to '包', {controller:"store",action:"index", search:"包"} %>
+              </li>
               <li class="nav-header">食品</li>
-              <li><a href="?search=酒水" method="get">酒水.饮料</a></li>
-              <li><a href="?search=零食" method="get">零食</a></li>
+              <li>
+                <%= link_to '酒水.饮料', {controller:"store",action:"index", search:"酒水.饮料"} %>
+              </li>
+              <li>
+                <%= link_to '零食', {controller:"store",action:"index", search:"零食"} %>
+              </li>
             </ul>
           </div><!--/.well -->
       </div>
