@@ -33,7 +33,7 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    debugger
+    # debugger
     @product = Product.new(product_params)
     @product.image_url="pro/" + uploadFile(params[:product]['image_url'])   
 

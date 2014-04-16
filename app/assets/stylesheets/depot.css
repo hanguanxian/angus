@@ -58,6 +58,11 @@ body {
     margin-top: .7em;
 }
 
+.label-bottom {
+    margin: 10px;
+}
 .nav-set {
     background: url(../images/bg.jpg);
+    margin-bottom: 12px;
 }
+

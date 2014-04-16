@@ -28,26 +28,27 @@
       </div>
     </div>
   </div>
-  
-  <div class="row form-group">
-    <div class="col-md-6"><lable>商品详情</lable>
-      <%= f.text_area :description , :rows => 3, class:"form-control"%>
-    </div>
-  </div>  
-  <div class="row form-group">
-    <div class="col-md-6">
-      <div class="input-group">
-        <span class="input-group-addon">添加图片</span>
-        <%= f.file_field :image_url, class:"form-control" %> 
-      </div>
-    </div>
-  </div>
-  <div class="row form-group">
+   <div class="row form-group">
     <div class="col-md-6">
       <div class="input-group">
         <span class="input-group-addon">商品价格</span>
         <%= f.text_field :price, class:"form-control",
              placeholder:"请输入商品价格" %>
+      </div>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-6">
+      <lable class="label-bottom">商品详情</lable>
+      <%= f.text_area :description , :rows => 3, class:"form-control"%>
+    </div>
+  </div>  
+
+  <div class="row form-group">
+    <div class="col-md-6">
+      <div class="input-group">
+        <lable class="label-bottom">选择图片</lable>
+        <%= f.file_field :image_url %> 
       </div>
     </div>
   </div>
