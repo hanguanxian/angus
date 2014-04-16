@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+        
   # GET /products
   # GET /products.json
   def who_bought
@@ -10,6 +10,8 @@ class ProductsController < ApplicationController
          format.xml{render :xml => @product}
     end
   end
+
+
   def index
     @products =  Product.paginate(:page => params[:page], :per_page => 6)
   end
@@ -31,8 +33,9 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    # debugger
+    debugger
     @product = Product.new(product_params)
+    @product.image_url="pro/" + uploadFile(params[:product]['image_url'])   
 
     respond_to do |format|
       if @product.save
@@ -68,6 +71,22 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+   def uploadFile(file)   
+     if !file.original_filename.empty?   
+       @filename=get_file_name(file.original_filename)    
+       File.open("#{Rails.root }/public/images/pro/#{@filename}", "wb") do |f|   
+          f.write(file.read)  
+       end
+       return @filename     
+     end   
+   end   
+  
+   def get_file_name(filename)   
+     if !filename.nil?   
+       Time.now.strftime("%Y%m%d%H%M%S") + '_' + filename   
+     end   
+   end   
 
   private
     # Use callbacks to share common setup or constraints between actions.
