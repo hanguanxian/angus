@@ -1,7 +1,9 @@
 <%= stylesheet_link_tag "component" %>
 
 <%= javascript_include_tag "modernizr.custom" %>
-
+ <% unless @productes.first %>
+    <h2><%= "没有找到相关商品 请输入其他关键字" %></h2>
+  <% end %>
 <section class="grid3d vertical" id="grid3d">
 
         <div class="grid-wrap">

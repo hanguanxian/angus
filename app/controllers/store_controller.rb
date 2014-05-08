@@ -5,9 +5,9 @@ class StoreController < ApplicationController
 	  	@productes = Product.paginate :page => params[:page],
                                       :per_page => 8,
                                       :conditions => ["pro_species like ?", "%#{params[:search]}%"] 
-	else             
+	  else             
 	    @productes =  Product.paginate(:page => params[:page], :per_page => 8)
-	end 
+	  end
     @cart = current_cart
   end
 end
