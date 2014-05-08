@@ -33,7 +33,9 @@ body {
 }
 /* An entry in the store catalog */
 
-
+#cart {
+    margin-bottom: 1.5em;
+}
 .depot_form fieldset {
     background: #efe;
     padding-bottom: 2em;
