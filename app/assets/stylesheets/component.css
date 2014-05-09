@@ -37,7 +37,7 @@ body {
 
 .grid figure {
 	float: left;
-	margin: 0 7px 30px;
+	margin: 0 7px 35px;
 	display: inline-block;
 	cursor: pointer;
 	-webkit-touch-callout: none;
@@ -233,8 +233,12 @@ body {
     font-weight: bold;
     line-height: 30px;
 }
+
+.dummy-price {
+	margin: 1em 0;
+}
 .dummy-text:last-child {
-	padding-bottom: 100px;
+	padding-bottom: 2em;
 }
 
 .price_line {

@@ -28,7 +28,7 @@
               <div class="dummy-text">
                 <div class="dummy-title"><%= product.title %></div>
                 <%= sanitize(product.description) %>
-                <div>
+                <div class="dummy-price">
                   <span class="price">
                     <%= number_to_currency(product.price ,  :unit=>"￥") %>
                   </span>
