@@ -32,7 +32,6 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    # debugger
     @product = Product.new(product_params)
     @product.image_url="pro/" + uploadFile(params[:product]['image_url'])   
 
@@ -50,9 +49,12 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+    @pro = Product.new(product_params)
+    @pro.image_url="pro/" + uploadFile(params[:product]['image_url'])
     respond_to do |format|
-      if @product.update(product_params)
-        format.html { redirect_to @product, notice: 'Product was successfully updated.' }
+      if @pro.save
+        @product.destroy
+        format.html { redirect_to @pro, notice: '更新成功.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -72,7 +74,7 @@ class ProductsController < ApplicationController
   end
   
    def uploadFile(file)   
-     if !file.original_filename.empty?   
+     if file   
        @filename=get_file_name(file.original_filename)    
        File.open("#{Rails.root }/public/images/pro/#{@filename}", "wb") do |f|   
           f.write(file.read)  
@@ -83,7 +85,8 @@ class ProductsController < ApplicationController
   
    def get_file_name(filename)   
      if !filename.nil?   
-       Time.now.strftime("%Y%m%d%H%M%S") + '_' + filename   
+       # Time.now.strftime("%Y%m%d%H%M%S") + '_' + filename
+       filename   
      end   
    end   
 
