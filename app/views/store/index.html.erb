@@ -11,7 +11,11 @@
             <% @productes.each do |product| %>
             <figure>
               <%= image_tag(product.image_url) %>
-              <h3><%= product.title %></h3>
+              <div class="pro-title"><%= product.title %></div>
+              <div class="pro-price">
+                <%= number_to_currency(product.price , :unit=>"￥") %>
+              </div>
+              
             </figure>
             <% end %>
           </div>
@@ -22,10 +26,11 @@
             <div>
               <div class="dummy-img"><%= image_tag(product.image_url) %></div>
               <div class="dummy-text">
+                <div class="dummy-title"><%= product.title %></div>
                 <%= sanitize(product.description) %>
                 <div>
                   <span class="price">
-                    <%= number_to_currency(product.price) %>
+                    <%= number_to_currency(product.price ,  :unit=>"￥") %>
                   </span>
                 </div>
                 <%= button_to '添加到购物车', line_items_path(:product_id => product), class: "btn btn-primary btn-lg" %>

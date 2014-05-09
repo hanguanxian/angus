@@ -37,7 +37,7 @@ body {
 
 .grid figure {
 	float: left;
-	margin: 0 7px 20px;
+	margin: 0 7px 30px;
 	display: inline-block;
 	cursor: pointer;
 	-webkit-touch-callout: none;
@@ -217,15 +217,22 @@ body {
 	height: 100%;
 }
 .dummy-text {
+	width: 50%;
 	position: relative;
 	text-align: left;
 	float: left;
-	margin: 2em;
+	margin: 1.8em;
 	padding: 10px 0;
 	font-size: 1.5em;
 	font-family: 'Blokk', Arial, serif;
 }
-
+.dummy-title {
+	margin-bottom: 1em;
+	font-family: Arial,黑体;
+	font-size: 2em;
+    font-weight: bold;
+    line-height: 30px;
+}
 .dummy-text:last-child {
 	padding-bottom: 100px;
 }

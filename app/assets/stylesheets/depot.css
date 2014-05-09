@@ -75,7 +75,25 @@ body {
     background: url(../images/bg.jpg);
     margin-bottom: 12px;
 }
-
+.nav li a {
+    color: #2C4949;
+}
 .set {
     padding-left: 0px;
+}
+
+.pro-price {
+  color: #CE2635;
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+
+.pro-title {
+  font-size: 1.5em;
+  margin-top: 0.2em;
+  text-overflow:ellipsis;
+  font-family: Arial,黑体;
+  overflow: hidden;
+  white-space: nowrap; 
+  word-wrap: break-word;
 }

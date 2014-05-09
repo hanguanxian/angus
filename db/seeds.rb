@@ -268,23 +268,31 @@ Product.create(:title => '鞋4',
                :image_url =>   '/images/pro/33.jpg',
                :price => 42.95)
 # . . .
-Product.create(:title => '包1',
+Product.create(:title => '14寸深棕色剑桥包',
                :description =>
-                   %{<p>
-        <em>包</em> 详细描述信息.
-      </p>},
+                   %{英国纯手工制作牛皮背包，知名时尚博主的心水首选<br/>
+全球潮人热捧的百搭 IT bag！<br/>
+
+材质：纯手工牛皮制作<br/>
+颜色：深棕色<br/>
+产地：英国<br/>
+},
                :pro_species => '包',
                :image_url =>   '/images/pro/34.jpg',
-               :price => 42.95)
+               :price => 32.95)
 # . . .
-Product.create(:title => '包2',
+Product.create(:title => '15寸粉绿色剑桥包(带提手)',
                :description =>
-                   %{<p>
-        <em>包</em> 详细描述信息.
-      </p>},
+                   %{英国纯手工制作牛皮背包，知名时尚博主的心水首选，<br/>
+全球潮人热捧的百搭 IT bag！<br/>
+
+规格：带提手、肩带可调节可拆卸<br/>
+材质：纯手工牛皮制作<br/>
+颜色：粉绿色<br/>
+产地：英国<br/>},
                :pro_species => '包',
                :image_url =>   '/images/pro/35.jpg',
-               :price => 42.95)
+               :price => 46.35)
 # . . .
 Product.create(:title => '包3',
                :description =>
