@@ -2,13 +2,10 @@
 <html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
-    <title>Depot</title>
-    <%= stylesheet_link_tag  "bootstrap.min" %>
-    <%= stylesheet_link_tag  "depot" %>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depot</title>
+    <%= stylesheet_link_tag  "application" %>
     <%= javascript_include_tag "application" %>
-   
     <%= csrf_meta_tags %>
   </head>
 <body>
@@ -32,19 +29,56 @@
         <li><%= link_to "登陆", login_path %></li>
       </ul>
       <% end %>
-      <form class="navbar-form pull-right" role="search" method="get" action=
+      
+      <div class="weather pull-right">
+        <iframe src="http://m.weather.com.cn/m/pn1/weather.htm " width="235" height="20" marginwidth="0"   marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>  
+      </div>
+    </div>
+  </nav>  
+  <div class="row">
+    <div class="col-md-6">
+      <div class="slideshow-list">
+        <ul>
+          <li><span class='toptext'><a href='http://www.feilook.com/thespace-a3.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>人员招聘</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a512.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>TOPMAN LUX 2013秋冬</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a513.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>THE WAY WE WEAR THEM</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a509.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>BEST IN SHOW</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a507.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>Topshop Unique 2014春夏秀场</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a506.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>Mary Katrantzou 的裙上风景</a></span></li> 
+        </ul>
+        <span class="prev-top">▲</span>
+        <span class="next-top">▼</span>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <form class="form-inline" role="search" method="get" action=
                    "<%= store_path %>">
         <div class="form-group">
             <input type="text" class="form-control" name="search" placeholder="输入商品进行搜索">
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
-      <div class="weather pull-right">
-        <iframe src="http://m.weather.com.cn/m/pn1/weather.htm " width="235" height="20" marginwidth="0"   marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>  
+      <div class="search_hot">热门搜索：<a href="http://item.haitao.com/s/index.php?q=%E5%8A%A0%E5%B7%9E%E5%AE%9D%E5%AE%9D">加州宝宝</a> <a href="http://item.haitao.com/s/index.php?q=小蜜蜂">小蜜蜂</a> <a href="http://item.haitao.com/s/index.php?q=魔声">魔声</a> <a href="http://item.haitao.com/s/index.php?q=新百伦">新百伦</a> <a href="http://item.haitao.com/s/index.php?q=手表">手表</a>  <a href="http://item.haitao.com/s/index.php?q=coach">coach</a> <a href="http://item.haitao.com/s/index.php?q=ecco">爱步ecco</a><a href="http://item.haitao.com/s/index.php?q=膳魔师">膳魔师</a> </div>
+    </div>
+  </div>
+  <div class="row">
+      <div id="container" class="index_ad">
+        <ul id="indexAdList">
+        <li>
+        <a href="http://www.feilook.com/onsale-0-p1.html"><img src="http://www.feilook.com/data/afficheimg/20140507waqitm.jpg"/></a>
+        </li>
+        <li>
+        <a href="http://www.feilook.com/topman/"><img src="http://www.feilook.com/data/afficheimg/20140428cbtcdj.jpg"/></a>
+        </li>
+        <li>
+        <a href="http://www.feilook.com/topshop/fuzhuang/"><img src="http://www.feilook.com/data/afficheimg/20140428uijlku.jpg"/></a>
+        </li>
+        <li>
+        <a href="http://www.feilook.com/brands/topshop-adidas"><img src="http://www.feilook.com/data/afficheimg/20140415ljkylm.jpg"/></a>
+        </li>
+        <li>
+        <a href="http://www.feilook.com/brands/Dienastie"><img src="http://www.feilook.com/data/afficheimg/20140320mmdkjr.jpg"/></a>
+        </li>
+        </ul>
+      <span class="prev-top"></span>
+      <span class="next-top"></span>
       </div>
     </div>
-  </nav>  
-
     <div class="row">
       <div class="col-md-3">
           <div class="well nav-set">

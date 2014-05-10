@@ -97,3 +97,23 @@ body {
   white-space: nowrap; 
   word-wrap: break-word;
 }
+
+.slideshow-list .next-top {
+  color: #000000;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  z-index: 9999;
+}
+
+.slideshow-list .prev-top {
+  color: #000000;
+  cursor: pointer;
+  position: absolute;
+  top: 2px;
+  z-index: 9999;
+}
+
+.slideshow-list ul {
+  left: 2em;
+}
