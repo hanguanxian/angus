@@ -26,4 +26,4 @@ group :production do
 end
 ruby '2.0.0'
 # Use debugger
-gem 'debugger'
+# gem 'debugger'
