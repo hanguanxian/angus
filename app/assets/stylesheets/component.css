@@ -227,11 +227,11 @@ body {
 	font-family: 'Blokk', Arial, serif;
 }
 .dummy-title {
-	margin-bottom: 1em;
 	font-family: Arial,黑体;
-	font-size: 2em;
-    font-weight: bold;
-    line-height: 30px;
+	font-size: 1em;
+    font-weight: normal;
+    line-height: 1em;
+    margin-bottom: 1em;
 }
 
 .dummy-price {

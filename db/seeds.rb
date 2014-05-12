@@ -343,7 +343,7 @@ Product.create(:title => '优默男装 春夏新品男士 短袖t恤 男修身�
       </p>},
                :pro_species => '服饰',
                :image_url =>   '/images/pro/28.jpg',
-               :price => 42.95)
+               :price => 55)
 # . . .
 Product.create(:title => '2014夏装新款衣服男士短袖T恤韩版修身半袖V领大码男装打底衫潮春 ',
                :description =>
@@ -374,61 +374,99 @@ Product.create(:title => '2014夏装新款衣服男士短袖T恤韩版修身半�
       </p>},
                :pro_species => '服饰',
                :image_url =>   '/images/pro/29.jpg',
-               :price => 42.95)
+               :price => 45)
 # . . .
-Product.create(:title => '服饰7',
+Product.create(:title => '2014春装夏装韩版大码女款学院卫衣服短裤短袖T恤上休闲衣套装 ',
                :description =>
                    %{<p>
-        <em>服饰</em> 详细描述信息.
+        无论你是都市丽人或是青涩的学生只要穿上套装，
+青春活力的精神面貌就可立马呈现。卸下职业套装以及知性OL通勤，
+不如来一款休闲主义的套装，给自己的精神冲电一下吧。简约的风格，
+唯有简约似乎才能衬托出别样的风格。短袖和短裤的完美搭配，
+脱去了短袖长裤的尴尬，更适合夏季的穿着。经典的圆领，干净、利落。裤子要为松紧，
+扩逛试穿范围。裤子斜插口袋的设计方便实用，同时也点缀了裤子。
+裤口和袖口的拼色翻边设计在空间上起到了对称之美。一款简约却不简单的套装，同样很出彩哦!
       </p>},
                :pro_species => '服饰',
                :image_url =>   '/images/pro/20.jpg',
-               :price => 42.95)
+               :price => 95)
 # . . .
-Product.create(:title => '服饰8',
+Product.create(:title => '女装衣服2014半袖女韩版短袖衬衫女夏装新款修身职业女士白色衬衣 ',
                :description =>
                    %{<p>
-        <em>服饰</em> 详细描述信息.
+        2014夏装新款 全网 首发上市 —— 原价79元—— 现在抢鲜特惠活动价55元哦——不退色——不缩水——不变形——不起球——高端大气上档次——品质保证——限量500件发售——工作服定制首选——大量库存现货——闪电发货 
       </p>},
                :pro_species => '服饰',
                :image_url =>   '/images/pro/23.jpg',
-               :price => 42.95)
+               :price => 25)
 # . . .
-Product.create(:title => '鞋1',
+Product.create(:title => '2014夏季新款轻质时尚豆豆鞋 欧伦堡男士休闲鞋男鞋鞋子',
                :description =>
                    %{<p>
-        <em>鞋</em> 详细描述信息.
+        上市年份季节: 2014年夏季
+货号: CDQQS1401
+品牌: Olunpo/欧伦堡
+鞋头款式: 方头
+闭合方式: 套脚
+鞋底材质: 橡胶
+鞋面材质: 人造革
+制作工艺: 胶粘鞋
+鞋跟: 平跟
+图案: 纯色
+流行元素: 车缝线
+风格: 休闲
+场合: 日常
+季节: 夏季
+颜色分类: 黑色 棕色 米白色 深蓝色
+尺码: 39（超舒适超柔软） 38（2014春夏时尚新款） 40（轻式足弓概念鞋） 41（豆豆按摩鞋底） 42（人气爆款新品） 43（偏小一码，请比平时大一码
+价格区间: 201-500元
+款式: 豆豆鞋
+功能: 轻质
+低帮鞋品名: 豆豆鞋
       </p>},
                :pro_species => '鞋',
                :image_url =>   '/images/pro/30.jpg',
-               :price => 42.95)
+               :price => 44.5)
 # . . .
-Product.create(:title => '鞋2',
+Product.create(:title => '人本 经典热卖英伦阿甘休闲鞋 女帆布鞋子 休闲鞋女鞋 ',
                :description =>
                    %{<p>
-        <em>鞋</em> 详细描述信息.
+    品牌: 人本
+    货号: 213450035
+    上市年份季节: 2013年夏季
+    风格: 甜美
+    鞋底材质: 橡胶
+    帮高: 低帮
+    闭合方式: 系带
+    流行元素: 交叉绑带
+    颜色分类: 兰绿色 红色 白色 烟灰色
+    尺码: 35 36 37 38 39
+    图案: 纯色
+    价格区间: 101-200元
+    适用对象: 青年
       </p>},
                :pro_species => '鞋',
                :image_url =>   '/images/pro/31.jpg',
                :price => 42.95)
 # . . .
-Product.create(:title => '鞋3',
+Product.create(:title => '经典女师凉鞋',
                :description =>
                    %{<p>
-        <em>鞋</em> 详细描述信息.
+2014夏季新款正品罗马水钻平底中坡跟波西米亚凉鞋女鞋子百丽都舍
+流行欧洲 时尚百搭 舒适坡跟凉鞋
       </p>},
                :pro_species => '鞋',
                :image_url =>   '/images/pro/32.jpg',
-               :price => 42.95)
+               :price => 56)
 # . . .
-Product.create(:title => '鞋4',
+Product.create(:title => 'exull依思Q凉鞋依思q2014新款凉鞋',
                :description =>
                    %{<p>
-        <em>鞋</em> 详细描述信息.
+        Exull依思Q"始终致力于将源自意大利的快乐时尚理念传递给每一位顾客,让"会时尚,惠生活"的态度融入每个女性的生活,随心·随行,乐享生活每一步！
       </p>},
                :pro_species => '鞋',
                :image_url =>   '/images/pro/33.jpg',
-               :price => 42.95)
+               :price => 77)
 # . . .
 Product.create(:title => '14寸深棕色剑桥包',
                :description =>
@@ -443,7 +481,7 @@ Product.create(:title => '14寸深棕色剑桥包',
                :image_url =>   '/images/pro/34.jpg',
                :price => 32.95)
 # . . .
-Product.create(:title => '15寸粉绿色剑桥包(带提手)',
+Product.create(:title => '15寸灰色剑桥包(带提手)',
                :description =>
                    %{英国纯手工制作牛皮背包，知名时尚博主的心水首选，<br/>
 全球潮人热捧的百搭 IT bag！<br/>
