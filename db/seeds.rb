@@ -494,28 +494,46 @@ Product.create(:title => '15寸灰色剑桥包(带提手)',
                :image_url =>   '/images/pro/35.jpg',
                :price => 46.35)
 # . . .
-Product.create(:title => '包3',
+Product.create(:title => 'Cambridge Satchel',
                :description =>
                    %{<p>
-        <em>包</em> 详细描述信息.
+        英国纯手工制作牛皮背包，知名时尚博主的心水首选，<br/>
+全球潮人热捧的百搭 IT bag！<br/>
+
+规格：带提手、肩带可调节可拆卸<br/>
+材质：纯手工牛皮制作<br/>
+颜色：粉绿色<br/>
+产地：英国<br/>
       </p>},
                :pro_species => '包',
                :image_url =>   '/images/pro/36.jpg',
                :price => 42.95)
 # . . .
-Product.create(:title => '包4',
+Product.create(:title => '11寸哥特紫剑桥包(带提手)',
                :description =>
                    %{<p>
-        <em>包</em> 详细描述信息.
+        英国纯手工制作牛皮背包，知名时尚博主的心水首选，<br/>
+全球潮人热捧的百搭 IT bag！<br/>
+
+规格：带提手、肩带可调节可拆卸<br/>
+材质：纯手工牛皮制作<br/>
+颜色：紫色<br/>
+产地：英国<br/>
       </p>},
                :pro_species => '包',
                :image_url =>   '/images/pro/37.jpg',
                :price => 42.95)
 # . . .
-Product.create(:title => '包5',
+Product.create(:title => '14寸设计师系列酒红拼色剑桥包',
                :description =>
                    %{<p>
-        <em>包</em> 详细描述信息.
+       英国纯手工制作牛皮背包，知名时尚博主的心水首选，<br/>
+全球潮人热捧的百搭 IT bag！<br/>
+
+规格：带提手、肩带可调节可拆卸<br/>
+材质：纯手工牛皮制作<br/>
+颜色：酒红拼色<br/>
+产地：英国<br/>
       </p>},
                :pro_species => '包',
                :image_url =>   '/images/pro/38.jpg',

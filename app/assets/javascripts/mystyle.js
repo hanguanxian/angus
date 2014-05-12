@@ -6,7 +6,7 @@ $(document).ready(function() {
     scroll: 2,
     visible: 2,
     auto: 5000,
-    speed: 500,
+    speed: 800,
     vertical: true　　
     });
   $("#container").jCarouselLite({　　
