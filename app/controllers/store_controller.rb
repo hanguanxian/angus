@@ -4,7 +4,8 @@ class StoreController < ApplicationController
   	if params[:search]
 	  	@productes = Product.paginate :page => params[:page],
                                       :per_page => 8,
-                                      :conditions => ["title like ?", "%#{params[:search]}%"] 
+                                      :conditions => ["title like ? or pro_species like ?",
+                                      "%#{params[:search]}%", "%#{params[:search]}%"] 
 	  else             
 	    @productes =  Product.paginate(:page => params[:page], :per_page => 8)
 	  end
