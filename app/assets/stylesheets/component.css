@@ -41,6 +41,7 @@ body {
 	display: inline-block;
 	cursor: pointer;
 	border: thin double;
+	padding: 2px;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
