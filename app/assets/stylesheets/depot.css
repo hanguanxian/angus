@@ -154,3 +154,8 @@ body {
 .copyright {
   font-size: .9em;
 }
+
+.center {
+  margin: 0 auto;
+  width: 50%;
+}
