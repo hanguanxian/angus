@@ -1,85 +1,85 @@
 /* Global styles */
 
 body {
-    background: #eeffee;
-    color: #454545;
-    font-family: Arial, Helvetica, sans-serif;
+  background: #eeffee;
+  color: #454545;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo {
-    background: url(../images/logo.png);
-    width: 270px;
-    height: 50px;
+  background: url(../images/logo.png);
+  width: 270px;
+  height: 50px;
 }
 .nav li a:hover {
-    background: #2A6496;
-    color: #fff;
-    border-radius: 5px;
+  background: #2A6496;
+  color: #fff;
+  border-radius: 5px;
 }
 .nav .nav-header {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 .show-grid {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #product_list .list_image {
-    height: 5.4em;
-    width: 6em;
+  height: 5.4em;
+  width: 6em;
 }
 .weather {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 /* An entry in the store catalog */
 
 #cart {
-    margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 .depot_form fieldset {
-    background: #efe;
-    padding-bottom: 2em;
+  background: #efe;
+  padding-bottom: 2em;
 }
 
 .depot_form legend {
-    color: #dfd;
-    background: #E8D8FF;
-    font-family: sans-serif;
-    padding: 0.2em 1em;
+  color: #dfd;
+  background: #E8D8FF;
+  font-family: sans-serif;
+  padding: 0.2em 1em;
 }
 
 .depot_form .form-group {
-    padding-bottom: 3em; 
+  padding-bottom: 3em; 
 }
  
 .depot_form .control-label {
-    text-align: right;
-    padding-top: .4em;
+  text-align: right;
+  padding-top: .4em;
 }
 
 
 /* END:form */
 .nav-color {
-    /*background: #EEFFEE;*/
-    color: #8E8277;
+  /*background: #EEFFEE;*/
+  color: #8E8277;
 }
 
 .add-pro {
-    margin-top: .7em;
+  margin-top: .7em;
 }
 
 .label-bottom {
-    margin: 10px;
+  margin: 10px;
 }
 .nav-set {
   /*  background: url(../images/bg.jpg);*/
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 .nav li a {
-    color: #2C4949;
+  color: #2C4949;
 }
 .set {
-    padding-left: 0px;
+  padding-left: 0px;
 }
 
 .pro-price {
@@ -123,32 +123,32 @@ body {
 }
 
 #container.index_ad .prev {
-    background: url("http://www.feilook.com/static/images/btn-prev.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    color: #000000;
-    cursor: pointer;
-    font-weight: bold;
-    height: 33px;
-    left: 10px;
-    position: absolute;
-    top: 45%;
-    width: 30px;
-    z-index: 999;
+  background: url("http://www.feilook.com/static/images/btn-prev.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  color: #000000;
+  cursor: pointer;
+  font-weight: bold;
+  height: 33px;
+  left: 10px;
+  position: absolute;
+  top: 45%;
+  width: 30px;
+  z-index: 999;
 }
 #container.index_ad .next {
-    background: url("http://www.feilook.com/static/images/btn-next.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    color: #000000;
-    cursor: pointer;
-    font-weight: bold;
-    height: 33px;
-    position: absolute;
-    right: 10px;
-    top: 45%;
-    width: 30px;
-    z-index: 999;
+  background: url("http://www.feilook.com/static/images/btn-next.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  color: #000000;
+  cursor: pointer;
+  font-weight: bold;
+  height: 33px;
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  width: 30px;
+  z-index: 999;
 }
 
 .index_ad {
-    margin: 0 0 1.5em 3em;
+  margin: 0 0 1.5em 3em;
 }
 
 .copyright {
