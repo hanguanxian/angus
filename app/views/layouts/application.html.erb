@@ -39,12 +39,12 @@
     <div class="col-md-4 ">
       <div class="slideshow-list">
         <ul>
-          <li><span class='toptext'><a href='http://www.feilook.com/thespace-a3.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>人员招聘</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a512.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>TOPMAN LUX 2013秋冬</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a513.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>THE WAY WE WEAR THEM</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a509.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>BEST IN SHOW</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a507.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>Topshop Unique 2014春夏秀场</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a506.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>Mary Katrantzou 的裙上风景</a></span></li> 
+          <li><span class='toptext'><%= link_to 'search', {controller:"store",action:"index", search:""} %></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a512.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>TOPMAN LUX 2013秋冬</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a513.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>THE WAY WE WEAR THEM</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a509.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>BEST IN SHOW</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a507.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>Topshop Unique 2014春夏秀场</a></span></li><li><span class='toptext'><a href='http://www.feilook.com/thespace-a506.html' target='_blank' style='font-size: 13px; color:#ddacc2;'>Mary Katrantzou 的裙上风景</a></span></li> 
         </ul>
         <span class="prev-top">▲</span>
         <span class="next-top">▼</span>
       </div>
-      <%= javascript_include_tag "mystyle" %>
+      
     </div>
     <div class="col-md-5 col-md-offset-3">
       <form class="form-inline" role="search" method="get" action=
@@ -54,34 +54,15 @@
         </div>
         <button type="submit" class="btn btn-default">搜索</button>
       </form>
-      <div class="search_hot">热门搜索：<a href="http://item.haitao.com/s/index.php?q=%E5%8A%A0%E5%B7%9E%E5%AE%9D%E5%AE%9D">加州宝宝</a> <a href="http://item.haitao.com/s/index.php?q=小蜜蜂">小蜜蜂</a> <a href="http://item.haitao.com/s/index.php?q=魔声">魔声</a> <a href="http://item.haitao.com/s/index.php?q=新百伦">新百伦</a> <a href="http://item.haitao.com/s/index.php?q=手表">手表</a>  <a href="http://item.haitao.com/s/index.php?q=coach">coach</a> <a href="http://item.haitao.com/s/index.php?q=ecco">爱步ecco</a><a href="http://item.haitao.com/s/index.php?q=膳魔师">膳魔师</a> </div>
+      <div class="search_hot">热门搜索：
+        <%= link_to '数码', {controller:"store",action:"index", search:"数码"} %>
+        <%= link_to '图书', {controller:"store",action:"index", search:"图书"} %>
+        <%= link_to '包', {controller:"store",action:"index", search:"包"} %>
+        <%= link_to '鞋', {controller:"store",action:"index", search:"鞋"} %>
+      </div>
     </div>
   </div>
-<!--   <div class="row">
-    <div class="col-md-9 col-md-offset-1">
-      <div id="container" class="index_ad">
-        <ul id="indexAdList">
-        <li>
-        <a href="http://www.feilook.com/onsale-0-p1.html"><img src="http://www.feilook.com/data/afficheimg/20140507waqitm.jpg"/></a>
-        </li>
-        <li>
-        <a href="http://www.feilook.com/topman/"><img src="http://www.feilook.com/data/afficheimg/20140428cbtcdj.jpg"/></a>
-        </li>
-        <li>
-        <a href="http://www.feilook.com/topshop/fuzhuang/"><img src="http://www.feilook.com/data/afficheimg/20140428uijlku.jpg"/></a>
-        </li>
-        <li>
-        <a href="http://www.feilook.com/brands/topshop-adidas"><img src="http://www.feilook.com/data/afficheimg/20140415ljkylm.jpg"/></a>
-        </li>
-        <li>
-        <a href="http://www.feilook.com/brands/Dienastie"><img src="http://www.feilook.com/data/afficheimg/20140320mmdkjr.jpg"/></a>
-        </li>
-        </ul>
-      <span class="prev-top"></span>
-      <span class="next-top"></span>
-      </div>
-      </div>
-    </div> -->
+
     <div class="row">
       <div class="col-md-3">
           <div class="well nav-set">
@@ -127,6 +108,26 @@
           </div><!--/.well -->
       </div>
       <div class="col-md-9 set">
+          <div class="row">
+            <div id="container" class="index_ad">
+              <ul id="indexAdList">
+                <li>
+                <img alt="百货表白日满减特惠 " src="http://pwg1.gtimg.cn/wanggou/855006089/855006089_f9864f7c97b8984d52c5e254bf67722_537179b1.jpg/0">
+                </li>
+                <li>
+                <img alt="易迅8周年庆" src="http://pwg0.gtimg.cn/wanggou/855006089/855006089_e849c547511537edbb318420c499fec_53717878.jpg/0">
+                </li>
+                <li>
+                <img alt="轻薄电脑节" src="http://pwg0.gtimg.cn/wanggou/855006089/855006089_ae49fbbaca060860cc6b42b5486974c_537179be.jpg/0">
+                </li>
+                <li>
+                <img alt="私人定制 逆天上市" src="http://pwg3.gtimg.cn/wanggou/855006089/855006089_6f2d5cc4da7de77835dc02984b3b998_53702031.jpg/0">
+                </li>
+              </ul>
+              <span class="prev"></span>
+              <span class="next"></span>
+            </div>
+          </div>
         <%= yield %>
       </div>
     </div>  
