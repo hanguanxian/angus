@@ -123,7 +123,7 @@ body {
 }
 
 #container.index_ad .prev {
-  background: url("http://www.feilook.com/static/images/btn-prev.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: url(../images/btn-prev.gif);
   color: #000000;
   cursor: pointer;
   font-weight: bold;
@@ -135,7 +135,7 @@ body {
   z-index: 999;
 }
 #container.index_ad .next {
-  background: url("http://www.feilook.com/static/images/btn-next.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: url(../images/btn-next.gif);
   color: #000000;
   cursor: pointer;
   font-weight: bold;
