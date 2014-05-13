@@ -18,20 +18,7 @@
     <span class="next"></span>
   </div>
 </div>    
-<script type="text/javascript">
-  
-$(document).ready(function() {
-     $("#container").jCarouselLite({　　
-    btnNext: ".next",
-    btnPrev: ".prev",
-    scroll: 1,
-    visible: 1,
-    auto: 5000,
-    speed: 500, 
-    vertical: false
-    });
-  });
-</script>        
+<hr>     
  <% unless @productes.first %>
     <h2><%= "没有找到相关商品 请输入其他关键字" %></h2>
   <% end %>
