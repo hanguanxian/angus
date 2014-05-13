@@ -40,7 +40,7 @@ body {
 	margin: 0 7px 35px;
 	display: inline-block;
 	cursor: pointer;
-	border: medium double;
+	border: thin double;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
