@@ -1,5 +1,7 @@
 
 Depot::Application.routes.draw do
+  resources :details
+
   resources :customs
 
   resources :users
@@ -10,6 +12,7 @@ Depot::Application.routes.draw do
     get "login" => :new
     post "login" => :create
     delete "logout" => :destroy
+    post "cuslogin" => :cuslogin
   end
   resources :orders
 

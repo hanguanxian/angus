@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140514065552) do
+ActiveRecord::Schema.define(version: 20140514083038) do
 
   create_table "carts", force: true do |t|
     t.datetime "created_at"
@@ -21,6 +21,26 @@ ActiveRecord::Schema.define(version: 20140514065552) do
   create_table "customs", force: true do |t|
     t.string   "name"
     t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "details", force: true do |t|
+    t.string   "name"
+    t.string   "addr"
+    t.string   "phone"
+    t.boolean  "defau"
+    t.integer  "custom_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "information", force: true do |t|
+    t.string   "name"
+    t.string   "addr"
+    t.string   "phone"
+    t.boolean  "defau"
+    t.integer  "custom_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -41,6 +61,7 @@ ActiveRecord::Schema.define(version: 20140514065552) do
     t.string   "pay_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "custom_id"
   end
 
   create_table "products", force: true do |t|
