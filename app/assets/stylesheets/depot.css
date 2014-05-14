@@ -97,6 +97,10 @@ body {
   white-space: nowrap; 
   word-wrap: break-word;
 }
+.slideshow-list ul li span a {
+  font-size: 13px; 
+  color:#ddacc2;
+}
 
 .slideshow-list .next-top {
   color: #000000;
