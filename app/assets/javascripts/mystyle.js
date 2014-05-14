@@ -1,5 +1,5 @@
 $(document).ready(function() {
-     $("#container").jCarouselLite({　　
+  $("#container").jCarouselLite({　　
     btnNext: ".next",
     btnPrev: ".prev",
     scroll: 1,
@@ -8,9 +8,7 @@ $(document).ready(function() {
     speed: 500, 
     vertical: false
     });
-  });
 
- $(document).ready(function() {
   $(".slideshow-list").jCarouselLite({　　
     btnNext: ".next-top",
     btnPrev: ".prev-top",

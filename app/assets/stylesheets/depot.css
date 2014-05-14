@@ -151,6 +151,11 @@ body {
   margin: 0 auto;
 }
 
+.index_ad ul li img {
+  width: 800px;
+  height: 330px;
+}
+
 .copyright {
   font-size: .9em;
 }
