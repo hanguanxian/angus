@@ -1,0 +1,62 @@
+<%= form_for(@detail) do |f| %>
+  <% if @detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@detail.errors.count, "error") %> prohibited this detail from being saved:</h2>
+
+      <ul>
+      <% @detail.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row form-group">
+    <div class="col-md-6">    
+      <div class="input-group">
+        <span class="input-group-addon">收货人姓名</span>
+        <%= f.text_field :name, class:"form-control"%>
+      </div>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-6">    
+      <div class="input-group">
+        <span class="input-group-addon">收货人地址</span>
+        <%= f.text_field :addr, class:"form-control"%>
+      </div>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-6">    
+      <div class="input-group">
+        <span class="input-group-addon">手机</span>
+        <%= f.text_field :phone, class:"form-control"%>
+      </div>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-6">    
+      <div class="input-group">
+        <span>默认收货地址</span>
+        <%= f.check_box :defau, class:"form-control"%>
+      </div>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-md-6">    
+      <div class="input-group">
+        <span class="input-group-addon">默认收货地址</span>
+        <%= f.number_field :custom_id, class:"form-control"%>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row form-group">
+    <div class="col-md-1 pull-left">
+      <div class="actions">
+        <button type="submit" class="btn btn-default" name="submit">确认</button>
+      </div>
+    </div>
+    <%= link_to '返回', details_path, class:"pull-left btn btn-default" %>
+  </div>
+<% end %>

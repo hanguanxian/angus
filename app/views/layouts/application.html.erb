@@ -34,7 +34,11 @@
       </ul>
       <% else %>
       <ul class="nav navbar-nav">
-        <li><%= link_to "登陆", login_path %></li>
+        <% if session[:custom_id] %>
+        <li><%= button_to "退出", logout_path, method: :delete, class: "btn btn-default navbar-btn" %></li>
+        <% else %>
+        <li><%= link_to "登陆", cuslogin_path %></li>
+        <% end %>
       </ul>
       <% end %>
       

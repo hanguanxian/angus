@@ -40,6 +40,8 @@ class LineItemsController < ApplicationController
   #  end
   #end
   def create
+    unless sessions[:custom_id]
+    end 
     @cart = current_cart
     product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product.id)

@@ -12,7 +12,8 @@ Depot::Application.routes.draw do
     get "login" => :new
     post "login" => :create
     delete "logout" => :destroy
-    post "cuslogin" => :cuslogin
+    get "cuslogin" => :cuslogin
+    post "cuslogin" => :mylogin
   end
   resources :orders
 
