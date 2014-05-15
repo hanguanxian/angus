@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
 
   private
   def password_must_be_present
-    errors.add(:password, "Missing password") unless hashed_password.present?
+    errors.add(:password, "请输入密码") unless hashed_password.present?
   end
   
   def generate_salt

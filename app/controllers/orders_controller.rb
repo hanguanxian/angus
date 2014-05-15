@@ -15,12 +15,17 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
+    unless session[:custom_id]
+      redirect_to cuslogin_url, :alert => "请先登录"
+    else
     @cart = current_cart
+    @details = Custom.find_by_id(session[:custom_id]).details
     if @cart.line_items.empty?
       redirect_to store_url, :notice =>"你的购物车已经清空"
       return
     end
     @order = Order.new
+    end
   end
 
   # GET /orders/1/edit
@@ -30,9 +35,11 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+ 
     @order = Order.new(order_params)
+       debugger
     @order.add_line_items_from_cart(current_cart)
-
+      
     respond_to do |format|
       if @order.save
         Cart.destroy(session[:cart_id])
@@ -78,6 +85,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type)
+      params.permit(:name, :address, :email)
     end
 end

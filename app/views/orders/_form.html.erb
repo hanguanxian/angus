@@ -1,52 +1,41 @@
-<%= form_for(@order) do |f| %>
-  <% if @order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+<table>
+  <%= render(@cart.line_items) %>
 
-      <ul>
-      <% @order.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
- <div class="row form-group">
-    <div class="col-md-6">
-      <div class="input-group">
-        <span class="input-group-addon">姓名</span>
-        <%= f.text_field :name, class:"form-control", placeholder:"请输入姓名"%>
-      </div>
-    </div>
-  </div>  
-  <div class="row form-group">
-    <div class="col-md-6">
-      <div class="input-group">
-        <span class="input-group-addon">地址</span>
-        <%= f.text_field :address, class:"form-control", placeholder:"请输入地址"%>
-      </div>
-    </div>
-  </div>
-  <div class="row form-group">
-    <div class="col-md-6">
-      <div class="input-group">
-        <span class="input-group-addon">邮箱</span>
-        <%= f.text_field :email, class:"form-control",
-             placeholder:"请输入邮箱" %>
-      </div>
-    </div>
-  </div>
-  <div class="row form-group">
-    <div class="col-md-6"><span >付款类型</span>
-      <%= f.select  :pay_type, Order::PAYMENT_TYPES, prompt:'选择付款类型', class:"form-control" %>
-    </div>
-  </div>
-  
-  <div class="row form-group">
-    <div class="col-md-1 pull-left">
-      <div class="actions">
-        <button type="submit" class="btn btn-default" name="submit">确认</button>
-      </div>
-    </div>
-    <%= link_to '返回', products_path, class:"pull-left btn btn-default" %>
-  </div>
-<% end %>
+  <tr class="total_line">
+    <td colspan="2">合计</td>
+    <td class="total_cell"><%= number_to_currency(@cart.total_price , :unit=>"￥") %></td>
+  </tr>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Addr</th>
+      <th>Phone</th>
+      <th>Defau</th>
+      <th>Custom</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @details.each do |detail| %>
+      <tr>
+        <%= form_for(@order) do |f| %>
+          <td><%= detail.name %></td>
+          <td><%= detail.addr %></td>
+          <td><%= detail.phone %></td>
+          <input name="name" type="hidden" value="<%= detail.name %>"/>
+          <input name="address" type="hidden" value="<%= detail.addr %>"/>
+          <input name="phone" type="hidden" value="<%= detail.phone %>"/>
+          <td><button type="submit" class="btn btn-default" name="submit">确认</button></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to '新增收货地址', new_detail_path %>
+<%= link_to '返回', products_path, class:"pull-left btn btn-default" %>
