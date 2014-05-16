@@ -2,8 +2,36 @@
 
 
 <div class="row show-grid">
-    <div class="col-md-1">姓名:</div>
-    <div class="col-md-6"><%= @custom.name %></div>
+    <div class="col-md-2"><h2>你好</h2></div>
+    <div class="col-md-6"><h2><%= @custom.name %></h2></div>
 </div>
-<%= link_to '编辑个人资料', edit_custom_path(@custom), class:"h3" %><br/>
-<%= link_to '新增收货地址', new_detail_path, class:"h3" %>
+<div class=""></div>
+<%= link_to '编辑个人资料', edit_custom_path(@custom), class:"h2" %><br/>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>收货人姓名</th>
+      <th>地址</th>
+      <th>联系电话</th>
+      <!-- <th>默认地址</th> -->
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @details.each do |detail| %>
+      <tr class="<%= cycle('list_line_odd','list_line_even') %>">
+        <td><%= detail.name %></td>
+        <td><%= detail.addr %></td>
+        <td><%= detail.contach %></td>
+        <!-- <td><%= detail.defau %></td> -->
+        <td><%= link_to '查看', detail %></td>
+        <td><%= link_to '编辑', edit_detail_path(detail) %></td>
+        <td><%= link_to '删除', detail, method: :delete, data: { confirm: '确定删除?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to '新增收货地址', new_detail_path, class:"h2" %>

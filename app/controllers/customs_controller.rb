@@ -1,6 +1,6 @@
 class CustomsController < ApplicationController
   before_action :set_custom, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :authorize, :only =>[:new, :create, :show, :edit]
+  skip_before_filter :authorize, :only =>[:new, :create, :show, :edit, :update]
   # GET /customs
   # GET /customs.json
   def index
@@ -10,6 +10,7 @@ class CustomsController < ApplicationController
   # GET /customs/1
   # GET /customs/1.json
   def show
+    @details = current_custom.details
   end
 
   # GET /customs/new
@@ -28,7 +29,8 @@ class CustomsController < ApplicationController
 
     respond_to do |format|
       if @custom.save
-        format.html { redirect_to @custom, notice: 'Custom was successfully created.' }
+        session[:custom_id] = @custom.id
+        format.html { redirect_to @custom, notice: '注册成功.' }
         format.json { render action: 'show', status: :created, location: @custom }
       else
         format.html { render action: 'new' }
@@ -42,7 +44,7 @@ class CustomsController < ApplicationController
   def update
     respond_to do |format|
       if @custom.update(custom_params)
-        format.html { redirect_to @custom, notice: 'Custom was successfully updated.' }
+        format.html { redirect_to @custom, notice: '修改成功.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

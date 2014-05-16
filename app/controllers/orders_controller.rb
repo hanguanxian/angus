@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_filter :current_custom
   skip_before_filter :authorize, :only =>[:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 

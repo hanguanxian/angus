@@ -1,6 +1,7 @@
 class DetailsController < ApplicationController
+  before_filter :current_custom
   before_action :set_detail, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :authorize, :only =>[:new, :create, :show, :edit, :update]
+  skip_before_filter :authorize
   # GET /details
   # GET /details.json
   def index
@@ -10,6 +11,7 @@ class DetailsController < ApplicationController
   # GET /details/1
   # GET /details/1.json
   def show
+    
   end
 
   # GET /details/new
@@ -33,7 +35,7 @@ class DetailsController < ApplicationController
       
       respond_to do |format|
         if @detail.save
-          format.html { redirect_to @detail, notice: 'Detail was successfully created.' }
+          format.html { redirect_to @detail, notice: '添加成功！' }
           format.json { render action: 'show', status: :created, location: @detail }
         else
           format.html { render action: 'new' }
@@ -48,7 +50,7 @@ class DetailsController < ApplicationController
   def update
     respond_to do |format|
       if @detail.update(detail_params)
-        format.html { redirect_to @detail, notice: 'Detail was successfully updated.' }
+        format.html { redirect_to @detail, notice: '修改成功.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -62,7 +64,7 @@ class DetailsController < ApplicationController
   def destroy
     @detail.destroy
     respond_to do |format|
-      format.html { redirect_to details_url }
+      format.html { redirect_to @custom }
       format.json { head :no_content }
     end
   end

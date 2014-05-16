@@ -1,13 +1,11 @@
-<h1>Listing details</h1>
+<h1>所有地址</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Addr</th>
-      <th>Phone</th>
-      <th>Defau</th>
-      <th>Custom</th>
+      <th>姓名</th>
+      <th>地址</th>
+      <th>联系电话</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,12 +14,10 @@
 
   <tbody>
     <% @details.each do |detail| %>
-      <tr>
+      <tr class="<%= cycle('list_line_odd','list_line_even') %>">
         <td><%= detail.name %></td>
         <td><%= detail.addr %></td>
-        <td><%= detail.phone %></td>
-        <td><%= detail.defau %></td>
-        <td><%= detail.custom_id %></td>
+        <td><%= detail.contach %></td>
         <td><%= link_to 'Show', detail %></td>
         <td><%= link_to 'Edit', edit_detail_path(detail) %></td>
         <td><%= link_to 'Destroy', detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -32,4 +28,3 @@
 
 <br>
 
-<%= link_to 'New Detail', new_detail_path %>

@@ -1,21 +1,23 @@
 <p id="notice"><%= notice %></p>
+<h3>
+<div class="row show-grid">
+    <div class="col-md-2">收货人:</div>
+    <div class="col-md-6"><%= @detail.name %></div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @detail.name %>
-</p>
+<div class="row show-grid">
+    <div class="col-md-2">所在地区:</div>
+    <div class="col-md-6"><%= @detail.addr %></div>
+</div>
 
-<p>
-  <strong>Addr:</strong>
-  <%= @detail.addr %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @detail.contach %>
-</p>
-
-
-
-<%= link_to '修改', edit_detail_path(@detail) %> 
-
+<div class="row show-grid">
+    <div class="col-md-2">联系电话:</div>
+    <div class="col-md-6"><%= @detail.contach %></div>
+</div>
+</h2>
+<div class="row">
+  <div class="col-md-2">
+    <%= link_to '修改', edit_detail_path(@detail), class:"btn btn-default pull-left" %> 
+    <%= link_to '返回', @custom , class:"btn btn-default pull-right" %>
+  </div>
+</div>
