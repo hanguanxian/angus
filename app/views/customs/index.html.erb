@@ -1,10 +1,10 @@
-<h1>Listing customs</h1>
+<h1>用户列表</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Password</th>
+      <th>姓名</th>
+      <th>密码</th>
       <th></th>
       <th></th>
       <th></th>
@@ -13,12 +13,12 @@
 
   <tbody>
     <% @customs.each do |custom| %>
-      <tr>
+      <tr class="<%= cycle('list_line_odd','list_line_even') %>">
         <td><%= custom.name %></td>
         <td><%= custom.password %></td>
-        <td><%= link_to 'Show', custom %></td>
-        <td><%= link_to 'Edit', edit_custom_path(custom) %></td>
-        <td><%= link_to 'Destroy', custom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '查看', custom %></td>
+        <td><%= link_to '编辑', edit_custom_path(custom) %></td>
+        <td><%= link_to '删除', custom, method: :delete, data: { confirm: '你确定 ?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Custom', new_custom_path %>
+<%= link_to '添加用户', new_custom_path, class:"h2" %>

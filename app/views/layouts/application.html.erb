@@ -29,7 +29,8 @@
       <ul class="nav navbar-nav">
         <li><%= link_to "订单", orders_path %></li>
         <li><%= link_to "商品", products_path %></li>
-        <li><%= link_to "用户", users_path %></li>
+        <li><%= link_to "用户", customs_path %></li>
+        <li><%= link_to "管理者", users_path %></li>
         <li><%= button_to "退出", logout_path, method: :delete, class: "btn btn-default navbar-btn" %></li>
       </ul>
       <% else %>
