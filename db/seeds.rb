@@ -7,6 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Product.delete_all
 User.create(:name => 'han', :password =>'secret',:password_confirmation => 'secret')
+Custom.create(:name => "han", :password => "han")
+Detail.create(:name => "han", :addr => "chongqin", :contach => "15618334836", :defau => true, :custom_id => 1)
 Product.create(:title => '不畏将来 不念过去 谁的青春不迷茫',
                :description =>
                    %{十二观点：一个女人嫁给了慌张，老得比什么都快。<br/>

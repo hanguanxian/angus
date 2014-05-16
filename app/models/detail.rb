@@ -1,4 +1,5 @@
 class Detail < ActiveRecord::Base
-	validates :name, :addr, :phone, :defau, :presence => true
+	validates :defau, :default => false
+	validates :name, :addr, :contach, :presence => true
 	belongs_to :custom
 end

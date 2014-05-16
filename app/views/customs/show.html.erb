@@ -1,14 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @custom.name %>
-</p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @custom.password %>
-</p>
-
-<%= link_to 'Edit', edit_custom_path(@custom) %> |
-<%= link_to 'Back', customs_path %>
+<div class="row show-grid">
+    <div class="col-md-1">姓名:</div>
+    <div class="col-md-6"><%= @custom.name %></div>
+</div>
+<%= link_to '编辑个人资料', edit_custom_path(@custom), class:"h3" %><br/>
+<%= link_to '新增收货地址', new_detail_path, class:"h3" %>

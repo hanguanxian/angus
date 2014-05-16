@@ -1,6 +1,6 @@
 class CustomsController < ApplicationController
   before_action :set_custom, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :authorize, :only =>[:new, :create, :show, :edit]
   # GET /customs
   # GET /customs.json
   def index

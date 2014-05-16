@@ -3,8 +3,8 @@ class CreateOrders < ActiveRecord::Migration
     create_table :orders do |t|
       t.string :name
       t.text :address
-      t.string :email
-      t.string :pay_type
+      t.string :contach
+      t.text :pro
 
       t.timestamps
     end

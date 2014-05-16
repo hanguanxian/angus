@@ -1,6 +1,6 @@
 class DetailsController < ApplicationController
   before_action :set_detail, only: [:show, :edit, :update, :destroy]
-
+  skip_before_filter :authorize, :only =>[:new, :create, :show, :edit, :update]
   # GET /details
   # GET /details.json
   def index
@@ -24,15 +24,21 @@ class DetailsController < ApplicationController
   # POST /details
   # POST /details.json
   def create
-    @detail = Detail.new(detail_params)
-
-    respond_to do |format|
-      if @detail.save
-        format.html { redirect_to @detail, notice: 'Detail was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @detail }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @detail.errors, status: :unprocessable_entity }
+    unless session[:custom_id]
+      redirect_to cuslogin_url, :alert => "请先登录"
+    else
+      custom_id = Custom.find_by_id(session[:custom_id])
+      @detail = Detail.new(detail_params)
+      @detail.custom_id = session[:custom_id]
+      
+      respond_to do |format|
+        if @detail.save
+          format.html { redirect_to @detail, notice: 'Detail was successfully created.' }
+          format.json { render action: 'show', status: :created, location: @detail }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @detail.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -69,6 +75,6 @@ class DetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def detail_params
-      params.require(:detail).permit(:name, :addr, :phone, :defau, :custom_id)
+      params.require(:detail).permit(:name, :addr, :contach, :defau)
     end
 end

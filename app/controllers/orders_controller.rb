@@ -37,11 +37,16 @@ class OrdersController < ApplicationController
   def create
  
     @order = Order.new(order_params)
-       debugger
-    @order.add_line_items_from_cart(current_cart)
-      
+    @cart = current_cart
+    @details = Custom.find_by_id(session[:custom_id]).details
+    tmp = ""
+    @cart.line_items.each do |line_item|
+      tmp += line_item.quantity.to_s + " * " +line_item.product.title + "\n"
+    end
+    @order.pro = tmp
     respond_to do |format|
       if @order.save
+        @order.add_line_items_from_cart(current_cart)
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         format.html { redirect_to(store_url, notice: '下单成功.') }
@@ -85,6 +90,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.permit(:name, :address, :email)
+      params.permit(:name, :address, :contach)
     end
 end

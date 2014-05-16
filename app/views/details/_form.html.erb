@@ -29,8 +29,8 @@
   <div class="row form-group">
     <div class="col-md-6">    
       <div class="input-group">
-        <span class="input-group-addon">手机</span>
-        <%= f.text_field :phone, class:"form-control"%>
+        <span class="input-group-addon">电话</span>
+        <%= f.text_field :contach, class:"form-control"%>
       </div>
     </div>
   </div>
@@ -43,20 +43,10 @@
     </div>
   </div>
   <div class="row form-group">
-    <div class="col-md-6">    
-      <div class="input-group">
-        <span class="input-group-addon">默认收货地址</span>
-        <%= f.number_field :custom_id, class:"form-control"%>
-      </div>
-    </div>
-  </div>
-  
-  <div class="row form-group">
     <div class="col-md-1 pull-left">
       <div class="actions">
         <button type="submit" class="btn btn-default" name="submit">确认</button>
       </div>
     </div>
-    <%= link_to '返回', details_path, class:"pull-left btn btn-default" %>
   </div>
 <% end %>

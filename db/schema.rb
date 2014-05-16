@@ -28,18 +28,8 @@ ActiveRecord::Schema.define(version: 20140514083038) do
   create_table "details", force: true do |t|
     t.string   "name"
     t.string   "addr"
-    t.string   "phone"
-    t.boolean  "defau"
-    t.integer  "custom_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "information", force: true do |t|
-    t.string   "name"
-    t.string   "addr"
-    t.string   "phone"
-    t.boolean  "defau"
+    t.string   "contach"
+    t.boolean  "defau",      default: false
     t.integer  "custom_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -57,8 +47,8 @@ ActiveRecord::Schema.define(version: 20140514083038) do
   create_table "orders", force: true do |t|
     t.string   "name"
     t.text     "address"
-    t.string   "email"
-    t.string   "pay_type"
+    t.string   "contach"
+    t.text     "pro"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "custom_id"
