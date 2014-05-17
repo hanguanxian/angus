@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_filter :current_custom
-  skip_before_filter :authorize, :only =>[:new, :create]
+  skip_before_filter :authorize, :only =>[:new, :create, :success]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
@@ -50,7 +50,7 @@ class OrdersController < ApplicationController
         @order.add_line_items_from_cart(current_cart)
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
-        format.html { redirect_to(store_url, notice: '下单成功.') }
+        format.html { redirect_to success_url }
         format.json { render action: 'show', status: :created, location: @order }
       else
         format.html { render action: 'new' }
@@ -58,7 +58,8 @@ class OrdersController < ApplicationController
       end
     end
   end
-
+  def success
+  end
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
   def update

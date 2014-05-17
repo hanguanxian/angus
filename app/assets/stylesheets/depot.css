@@ -1,7 +1,7 @@
 /* Global styles */
 
 body {
-  background: #eeffee;
+  background:  url("../images/bg.jpg") no-repeat scroll center top #FFFFFF;
   color: #454545;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -43,7 +43,7 @@ body {
 
 .depot_form legend {
   color: #dfd;
-  background: #E8D8FF;
+  background: #DDACC2;
   font-family: sans-serif;
   padding: 0.2em 1em;
 }
@@ -60,7 +60,7 @@ body {
 
 /* END:form */
 .nav-color {
-  /*background: #EEFFEE;*/
+  background: #EEFFEE;
   color: #8E8277;
 }
 
@@ -72,7 +72,7 @@ body {
   margin: 10px;
 }
 .nav-set {
-  /*  background: url(../images/bg.jpg);*/
+  /*background: url(../images/bg.jpg);*/
   margin-bottom: 12px;
 }
 .nav li a {

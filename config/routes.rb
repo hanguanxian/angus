@@ -7,7 +7,7 @@ Depot::Application.routes.draw do
   resources :users
 
   get 'admin' => 'admin#index'
-
+  get 'success' => 'orders#success'
   controller :sessions do
     get "login" => :new
     post "login" => :create
