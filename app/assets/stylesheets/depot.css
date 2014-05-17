@@ -37,13 +37,12 @@ body {
   margin-bottom: 1.5em;
 }
 .depot_form fieldset {
-  background: #efe;
+  background: #F5F5F5;
   padding-bottom: 2em;
 }
 
 .depot_form legend {
-  color: #dfd;
-  background: #DDACC2;
+  background: #F4F4F4;
   font-family: sans-serif;
   padding: 0.2em 1em;
 }
