@@ -12,4 +12,8 @@ class StoreController < ApplicationController
 	    @productes =  Product.paginate(:page => params[:page], :per_page => 8)
 	  end
   end
+
+  def ad
+     @productes =  Product.paginate(:page => params[:page], :per_page => 8)
+  end
 end

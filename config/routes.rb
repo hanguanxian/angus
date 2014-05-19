@@ -22,6 +22,7 @@ Depot::Application.routes.draw do
   resources :carts
 
   get "store/index"
+  get 'ad' => 'store#ad'
 
   resources :products do
     get :who_bought, :on => :member
