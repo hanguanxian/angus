@@ -36,6 +36,8 @@ height: 18.2em;
 }
 
 .grid figure {
+border: 1px solid #E5E5E5;
+box-shadow: 0 1px 3px #CCCCCC;
 float: left;
 margin: 0 7px 35px;
 display: inline-block;
